@@ -1,11 +1,7 @@
 import React from 'react'
 
-function ShowTask() {
-    const tasks = [
-        {id : 1001, name : "Task A", time : "04:00:00 AM"},
-        {id : 1001, name : "Task B", time : "04:00:00 AM"},
-        {id : 1001, name : "Task C", time : "04:00:00 AM"}
-    ]
+function ShowTask({taskList, setTaskList}) {
+   
   return (
     <section className='showTask'>
         <div className='head'>
@@ -16,7 +12,7 @@ function ShowTask() {
             <button className='clearAll'>Clear All</button>
         </div>
         <ul>
-            {tasks.map((task) =>(
+            {taskList.map((task) =>(
                 <li>
                 <p>
                      <span className='name'>{task.name}</span>
